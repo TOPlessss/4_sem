@@ -1,5 +1,7 @@
 package com.example.lab1;
 
+import android.content.Context;
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,7 +18,8 @@ public class SecondActivity extends AppCompatActivity {
     ItemsList[] list;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         Log.d(TAG, "OnCreate: Started");
