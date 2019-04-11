@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView" />
 </android.support.constraint.ConstraintLayout>

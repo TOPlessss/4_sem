@@ -50,22 +50,6 @@ public class MainActivity extends AppCompatActivity {
         thread.start();
     }
 
-//    public void start()
-//    {
-//        new Handler().postDelayed(new Runnable()
-//        {
-//            @Override
-//            public void run()
-//            {
-//                if(!isChangingConfigurations())
-//                {
-//                    startActivity(new Intent(MainActivity.this, SecondActivity.class));
-//                    finish();
-//                }
-//            }
-//        }, 3000);
-//    }
-
     public void  flipperImages(int image)
     {
         ImageView imageView = new ImageView(this);
