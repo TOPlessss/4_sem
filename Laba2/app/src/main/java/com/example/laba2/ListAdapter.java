@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -18,6 +17,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
 
     private LayoutInflater inflater;
     private Context mContext;
+    private static ClickListener clickListener;
 
     public ListAdapter(Context mContext)
     {
@@ -71,23 +71,27 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         {
             super(itemView);
 
-            imageView = (ImageView) itemView.findViewById(R.id.imageView);
-            textView = (TextView) itemView.findViewById(R.id.textView);
+            imageView = itemView.findViewById(R.id.imageView);
+            textView = itemView.findViewById(R.id.textView);
 
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)
                 {
-                    // Показываем Toast
-                    int positionIndex = getAdapterPosition();
-
-                    Toast toast = Toast.makeText(mContext, "Element " + positionIndex + " was clicked", Toast.LENGTH_SHORT);
-
-                    toast.show();
+                    clickListener.onItemClick(v, getAdapterPosition());
                 }
             });
         }
 
+    }
+    public interface ClickListener
+    {
+        void onItemClick(View view, int position);
+    }
+
+    public void setOnClickListener(ClickListener clickListener)
+    {
+        ListAdapter.clickListener = clickListener;
     }
 }
