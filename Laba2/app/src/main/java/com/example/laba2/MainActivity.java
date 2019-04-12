@@ -22,8 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
         itemsList.setHasFixedSize(true); // Заранее знаем размер списка
 
-        listAdapter = new ListAdapter(100, this);
+        listAdapter = new ListAdapter(this);
         itemsList.setAdapter(listAdapter);
+
+
 
     }
 }
