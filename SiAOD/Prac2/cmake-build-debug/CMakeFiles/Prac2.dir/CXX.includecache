@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/4_sem/SiAOD/Prac2/main.cpp
+iostream
+-
+algorithm
+-
+string
+-
+Windows.h
+-
+malloc.h
+-
+

@@ -1,0 +1,3 @@
+F:/4_sem/SiAOD/Prac2/cmake-build-debug/CMakeFiles/Prac2.dir
+F:/4_sem/SiAOD/Prac2/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/4_sem/SiAOD/Prac2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
